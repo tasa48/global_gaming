@@ -1,0 +1,163 @@
+/*css del header del panel de aministrador  */
+body {
+    font-family: 'Roboto', sans-serif !important;
+    background-color: #f4f4f4;
+    color: #333;
+    
+  
+}
+
+header {
+    background-color: #000000;
+    color: #fff;
+    padding: 5px 0; 
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para la lista de navegación (ul) */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #FFC300;
+    text-decoration: none;
+    font-size: 20px; 
+    
+    line-height: 40px; 
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFF;
+}
+/*cerrar sesion*/
+
+.nav-link-right {
+    float: right; 
+    margin-right: 20px; 
+    margin-top: -30px;
+    font-size: 20px;
+    color: #FFC300; 
+    text-decoration: none !important; 
+    transition: color 0.3s ease;
+}
+.nav-link-right:hover {
+    color: #ff0000; 
+}
+/*tabla*/
+
+
+/*botones*/
+.btn-primary {
+    background-color: #007BFF;
+    border-color: #007BFF;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-sm {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+}
+
+.welcome-panel {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin: 20px;
+}
+
+.welcome-panel h1 {
+    margin-bottom: 10px;
+}
+
+.welcome-panel p {
+    color: #666;
+}
+
+/*formulario para editar el usuario*/
+
+.form-container {
+    max-width: 600px !important; 
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa; 
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #343a40; 
+}
+
+.form-container .form-group label {
+    color: #495057; 
+    font-weight: 600;
+}
+
+.form-container .form-control {
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+}
+
+.form-container .btn-primary {
+    width: 100%;
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.form-container .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.form-container .btn-secondary {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 4px;
+    background-color: #6c757d;
+    border-color: #6c757d;
+}
+
+.form-container .btn-secondary:hover {
+    background-color: #5a6268;
+    border-color: #545b62;
+}
+
+
+/*footer del administrador */
+footer {
+    background-color: #000000;
+    color: #FFC300;
+    text-align: center;
+    padding: 20px 20px !important; 
+    margin-top: 450px; /*temporol mientras añod contenido al panel de administrador */
+    bottom: 0; 
+    left: 0;
+    right: 0; 
+    width: 100%;
+
+}
+ 

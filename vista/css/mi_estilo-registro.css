@@ -1,0 +1,135 @@
+/* Modal */
+.modal-dialog {
+  max-width: 600px !important; /* Ancho máximo de la ventana modal */
+  margin: 50px auto !important; /* Margen superior e inferior para centrar verticalmente */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: calc(100% - 60px) !important; /* Ajusta la altura del modal para centrarlo */
+}
+
+.modal-content {
+  height: 600px !important; /* Altura de la ventana modal */
+  overflow-y: auto !important; /* Habilitar desplazamiento vertical si es necesario */
+  background-color: #01142e !important; /* Fondo del modal */
+  color: #fff !important; /* Color del texto */
+  padding: 20px !important; /* Añade relleno al contenido dentro del modal */
+  border-radius: 10px !important; /* Agrega esquinas redondeadas al modal */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* Agrega una sombra suave */
+}
+
+.modal-body {
+  padding-bottom: 20px !important; /* Ajusta el espacio inferior del cuerpo del modal */
+}
+
+.modal-title {
+  color: #FFC300 !important; /* Cambia el color del título del modal */
+  font-size: 24px !important; /* Ajusta el tamaño de fuente del título */
+  font-weight: bold !important; /* Aplica negrita al título */
+}
+
+.img-fluid {
+  max-width: 20% !important;
+  height: 100px !important;
+  width: 100px !important;
+}
+
+/* Otros estilos */
+.alto {
+  height: 680px !important;
+}
+
+.barra {
+  background-color: #000 !important;
+}
+
+ul li a {
+  color: #FFC300 !important;
+  font-size: 25px !important;
+  font-family: monospace !important;
+  padding-left: 20px !important;
+  margin-top: -9px !important;
+}
+
+.beneficios {
+  background-color: #000 !important;
+  height: 200px !important;
+  color: #FFC300 !important;
+  font-size: 24px !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  margin-top: 20px !important;
+  padding-top: 20px !important;
+  margin-bottom: 30px !important;
+}
+
+.barra2 {
+  background-color: #000 !important;
+  border-radius: 20px !important;
+}
+
+.navbar-toggler-icon {
+  color: #fff !important;
+}
+
+.btn-primary {
+  background-color: #FFC300 !important;
+}
+
+.btn-primary:hover {
+  background-color: #001570 !important;
+  border-color: #001570 !important;
+}
+
+.card-header {
+  color: #FFC300 !important;
+  background-color: #000 !important;
+}
+
+.card-body {
+  background-color: #000 !important;
+  color: #FFC300 !important;
+}
+
+body {
+  background-color: #01142e !important;
+}
+
+footer {
+  background-color: #000 !important;
+  color: #fff !important;
+  text-align: center !important;
+  padding: 20px 0 !important;
+}
+
+.footer-content {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: space-between !important;
+}
+
+.footer-section {
+  flex: 1 !important;
+  margin: 0 20px !important;
+}
+
+.footer-section img {
+  max-width: 100% !important;
+  height: auto !important;
+}
+
+.social-icons a {
+  color: #fff !important;
+  font-size: 24px !important;
+  margin-right: 10px !important;
+}
+
+.footer-bottom {
+  margin-top: 20px !important;
+}
+
+.footer-bottom p {
+  margin: 0 !important;
+}

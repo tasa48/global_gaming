@@ -1,0 +1,144 @@
+.alto {
+	height: 680px !important;
+}
+.barra{
+	background-color:#000 ;
+	
+}
+ul li a {
+ 	color:#FFC300 !important;
+ 	font-size:25px !important ;
+ 	font-family: monospace !important;
+ 	padding-left: 20px !important;
+ 	margin-top: -9px;
+}
+.beneficios{
+background-color: #000;
+height: 200px;
+color:#FFC300;
+font-size: 24px;
+font-weight: bold;
+text-align: center;
+margin-top: 20px;
+padding-top: 20px;
+margin-bottom: 30px;
+}
+.barra2{
+	background-color: #000;
+	border-radius: 20px;
+}
+.navbar-toggler-icon{
+	color:#fff !important;
+}
+.btn-primary{
+	background-color: #FFC300;
+}
+/* Ajustar altura y posición de la ventana modal */
+.modal-dialog {
+    max-width: 600px; /* Ancho máximo de la ventana modal */
+    margin: 50px auto; /* Margen superior e inferior para centrar verticalmente */
+}
+
+.modal-content {
+    height: 600px; /* Altura de la ventana modal */
+    overflow-y: auto; /* Habilitar desplazamiento vertical si es necesario */
+}
+.modal-dialog {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100% - 60px); /* Ajusta la altura del modal para centrarlo */
+}
+
+
+.input-login[type="text"],
+.input-login[type="password"] {
+    margin-bottom: 20px; /* Espacio inferior entre entradas de texto */
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho total */
+}
+.btn-primary:hover {
+    background-color: #001570; /* Cambia el color de fondo del botón de inicio de sesión al pasar el mouse */
+    border-color: #001570; /* Cambia el color del borde del botón de inicio de sesión al pasar el mouse */
+}
+.modal-content {
+    background-color: #000000; /* Cambia el color de fondo del modal a gris oscuro */
+    color: #fff; /* Cambia el color del texto a blanco */
+    padding: 20px; /* Añade relleno al contenido dentro del modal */
+    border-radius: 10px; /* Agrega esquinas redondeadas al modal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Agrega una sombra suave */
+}
+.modal-body {
+    padding-bottom: 20px; /* Ajusta el espacio inferior del cuerpo del modal */
+}
+.modal-title {
+    color: #FFC300; /* Cambia el color del título del modal (por ejemplo, azul) */
+    font-size: 24px; /* Ajusta el tamaño de fuente del título */
+    font-weight: bold; /* Aplica negrita al título */
+}
+
+label {
+    margin-bottom: 10px; /* Espacio inferior entre etiquetas */
+    display: block; /* Para que cada etiqueta se muestre en una línea nueva */
+    font-weight: bold; /* Aplica negrita a las etiquetas */
+}
+
+input[type="text"],
+input[type="password"] {
+    margin-bottom: 20px; /* Espacio inferior entre entradas de texto */
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    box-sizing: border-box; /* Incluye el relleno y el borde en el ancho total */
+    border: 1px solid #000000; /* Agrega un borde alrededor de los campos de texto */
+    border-radius: 5px; /* Agrega esquinas redondeadas a los campos de texto */
+    color: #333; /* Cambia el color del texto de los campos de texto a gris oscuro */
+    background-color: #fff; /* Cambia el color de fondo de los campos de texto a blanco */
+}
+
+.img-fluid{
+	width: 50%;
+	height: 50%;
+}
+
+
+
+footer {
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	padding: 20px 0;
+  }
+  
+  .footer-content {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  }
+  
+  .footer-section {
+	flex: 1;
+	margin: 0 20px;
+  }
+  
+  .footer-section img {
+	max-width: 100%;
+	height: auto;
+  }
+  
+  .social-icons a {
+	color: #fff;
+	font-size: 24px;
+	margin-right: 10px;
+  }
+  
+  .footer-bottom {
+	margin-top: 20px;
+  }
+  
+  .footer-bottom p {
+	margin: 0;
+  }
+  

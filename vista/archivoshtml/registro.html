@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Gaming registro</title>
+    <link rel="stylesheet" type="text/css" href="vista/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="vista/css/mi_estilo.css">
+    <link rel="icon" href="vista/img/G-icon.ico">
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <title>Formulario de Registro</title>
+    </head>
+
+    <body>
+        <!--barra de navegacion-->
+        <nav class="navbar navbar-expand-lg navbar-light barra">
+            <a class="navbar-brand" href="index.html"> <img src="vista/img/G.png"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!--inicio de registro-->
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="card-title">Registrarse</h5>
+                        </div>
+                        <div class="card-body">
+                            <form action="URL_DE_REGISTRO" method="POST">
+                                <div class="form-group">
+                                    <label for="identificacion">Identificación</label>
+                                    <input type="text" class="form-control" id="identificacion" name="identificacion"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tipo_identificacion">Tipo de Identificación</label>
+                                    <select class="form-control" id="tipo_identificacion" name="tipo_identificacion"
+                                        required>
+                                        <option value="cedula">Cédula</option>
+                                        <option value="pasaporte">Pasaporte</option>
+                                        <option value="otro">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="nombre">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="apellido">Apellido</label>
+                                    <input type="text" class="form-control" id="apellido" name="apellido" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="usuario">Usuario</label>
+                                    <input type="text" class="form-control" id="usuario" name="usuario" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contrasena">Contraseña</label>
+                                    <input type="password" class="form-control" id="contrasena" name="contrasena"
+                                        required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="celular">Celular</label>
+                                    <input type="text" class="form-control" id="celular" name="celular" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="direccion">Dirección</label>
+                                    <input type="text" class="form-control" id="direccion" name="direccion" required>
+                                </div>
+                                <div class="d-flex justify-content-between mt-3">
+                                    <button type="reset" class="btn btn-secondary">Limpiar</button>
+                                    <button type="submit" class="btn btn-primary">Registrarse</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+
+    </html>
+
+
+
+    <!--pie de pagina-->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h2>Teléfono</h2>
+                <p>Teléfono: +123 456 789</p>
+            </div>
+            <div class="footer-section">
+                <img src="vista/img/G.png">
+            </div>
+            <div class="footer-section">
+                <h2>Contáctanos</h2>
+                <div class="social-icons">
+                    <img src="vista/img/WhatsApp.png">
+                    <img src="vista/img/Facebook.png">
+                    <img src="vista/img/Instagram.png">
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <h6> Política de privacidad | Términos y Condiciones | Aviso de Privacidad | SIC</h6>
+            <p>&copy; Global Gaming 2023. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!--links-->
+    <script src="vista/js/jquery.js"></script>
+    <script src="vista/js/popper.min.js"></script>
+    <script src="vista/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
