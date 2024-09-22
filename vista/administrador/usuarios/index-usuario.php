@@ -57,6 +57,7 @@ $result = $conn->query($sql);
       <!--  <a href="#" class="btn btn-primary">Agregar Usuario</a> boton de agregar usuario -->
         <a href="editar-usuario.php" class="btn btn-primary">Editar Usuario</a>
         <a href="crear-usuario.php" class="btn btn-primary">Crear usuario</a>
+        <a href="reporte.php" target="_blank" class="btn btn-primary">Generar reporte</a>
         
     </div>
 </div>
