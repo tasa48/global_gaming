@@ -6,27 +6,25 @@ include '../modelo/conexion_bd.php';
 if (isset($_GET['prod_codigo'])) {
     $codigo = $_GET['prod_codigo'];
 
-    // Consulta SQL para eliminar el producto
+ 
     $sql = "DELETE FROM producto WHERE prod_codigo = $codigo";
 
     if ($conn->query($sql) === TRUE) {
-        // Redirigir con mensaje de éxito
+        
         header("Location: ../vista/administrador/productos/index-producto.php");
         exit();
     } else {
         echo "Error eliminando producto: " . $conn->error;
     }
-
-    // Cerrar la conexión a la base de datos
     $conn->close();
     exit();
 }
 
 // Crear o Editar un producto (POST request)
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Verificar si se está creando o editando un producto
+  
     if (isset($_POST['prod_codigo']) && !empty($_POST['prod_codigo'])) {
-        // Editar producto
+       
         $codigo = $_POST['prod_codigo'];
         $nombre = $_POST['prod_nombre'];
         $precioventa = $_POST['prod_precioventa'];
@@ -46,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 WHERE prod_codigo = $codigo";
 
         if ($conn->query($sql) === TRUE) {
-            // Redirigir a la lista de productos con mensaje de éxito
+          o
             header("Location: ../vista/administrador/productos/index-producto.php");
             exit();
         } else {
@@ -62,12 +60,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $descripcion = $_POST['prod_descripcion'];
         $foto = ''; // Dejar la foto en blanco por ahora
 
-        // Consulta SQL para insertar el nuevo producto
+      
         $sql = "INSERT INTO producto (prod_nombre, prod_precioventa, prod_stock, prod_unidaddemedida, prod_foto, prod_descripcion) 
                 VALUES ('$nombre', '$precioventa', '$stock', '$unidaddemedida', '$foto', '$descripcion')";
 
         if ($conn->query($sql) === TRUE) {
-            // Redirigir a la lista de productos con mensaje de éxito
+           
             header("Location:../vista/administrador/productos/index-producto.php");
             exit();
         } else {
@@ -75,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
-    // Cerrar la conexión a la base de datos
+
     $conn->close();
 }
 ?>

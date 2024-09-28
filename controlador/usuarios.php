@@ -3,12 +3,6 @@
 // conexion de base de datos 
 include '../modelo/conexion_bd.php';
 
-
-//eliminar un usuario 
-
-// Incluimos la conexión a la base de datos
-include '../modelo/conexion_bd.php';
-
 // Verifica si se ha pasado un usua_codigo por GET para eliminar
 if (isset($_GET['usua_codigo'])) {
     $codigo = $_GET['usua_codigo'];

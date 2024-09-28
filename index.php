@@ -5,6 +5,11 @@ session_start();
 if (isset($_GET['logout']) && $_GET['logout'] == 1) {
     echo "<script>alert('Has cerrado sesión correctamente.');</script>";
 }
+$sql = "select  prod_codigo, prod_nombre, prod_descripcion FROM producto";
+$result = $conn->query($sql);
+
+
+
 ?>
 
 
