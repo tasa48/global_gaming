@@ -66,9 +66,9 @@ if (isset($_GET['prod_codigo'])) {
     <h1>📦Gestión de Productos</h1>
     <div class="button-group">
       <!--  <a href="#" class="btn btn-primary">Agregar Usuario</a> boton de agregar usuario -->
-        <a href="editar-usuario.php" class="btn btn-primary">Editar producto</a>
-        <a href="crear-usuario.php" class="btn btn-primary">Crear producto</a>
-        
+        <a href="editar-producto.php" class="btn btn-primary">Editar producto</a>
+        <a href="crear-producto.php" class="btn btn-primary">Crear producto</a>
+        <a href="reporte-producto.php" target="_blank" class="btn btn-primary">Generar reporte</a>
     </div>
 </div>
 
@@ -84,7 +84,7 @@ if (isset($_GET['prod_codigo'])) {
                     <th>Precio venta</th>
                     <th>Stock</th>
                     <th>Unidad de medida</th>
-                    <th>Foto</th>
+                    
                     <th>Descripcion</th>
                     <th>CRUD</th>
                 </tr>
@@ -97,20 +97,21 @@ if (isset($_GET['prod_codigo'])) {
                         <td><?php echo $row['prod_precioventa']; ?></td>
                         <td><?php echo $row['prod_stock']; ?></td>
                         <td><?php echo $row['prod_unidaddemedida']; ?></td>
-                        <td><?php echo $row['prod_foto']; ?></td>
+                       
                         <td><?php echo $row['prod_descripcion']; ?></td>
                         
                         <td>
-                        <a href="editar-usuario.php?usua_codigo=<?php echo $row['prod_codigo']; ?>" class="btn btn-primary btn-sm">Editar</a>
+                        <a href="editar-producto.php?prod_codigo=<?php echo $row['prod_codigo']; ?>" class="btn btn-primary btn-sm">Editar</a>
 
                     
                         
 
-                        <a href="../../controlador/usuarios.php?usua_codigo=<?php echo $row['prod_codigo']; ?>" 
-   class="btn btn-danger btn-sm" 
-   onclick="return confirm('¿Estás seguro de que deseas eliminar al usuario <?php echo $row['prod   _nombre']; ?>?');">
-   Eliminar
-</a>
+                        <a href="../../../controlador/productos.php?prod_codigo=<?php echo $row['prod_codigo']; ?>" 
+                         class="btn btn-danger btn-sm" 
+                         onclick="return confirm('¿Estás seguro de que deseas eliminar el producto <?php echo htmlspecialchars($row['prod_nombre']); ?>?');">
+                                                Eliminar
+                        </a>
+
 
                         </td>
                     </tr>   
