@@ -32,7 +32,9 @@ if (!isset($_SESSION['usuario']) || $_SESSION['rol'] != 1) {
 
     <main class="container mt-5">
         <h2>Crear Nuevo Producto</h2>
-        <form action="../../../controlador/productos.php" method="POST">
+
+        <!-- Atributo enctype añadido para permitir la carga de archivos -->
+        <form action="../../../controlador/productos.php" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="prod_nombre">Nombre del Producto:</label>
                 <input type="text" class="form-control" id="prod_nombre" name="prod_nombre" required>
@@ -58,6 +60,12 @@ if (!isset($_SESSION['usuario']) || $_SESSION['rol'] != 1) {
                 <textarea class="form-control" id="prod_descripcion" name="prod_descripcion" rows="5" required></textarea>
             </div>
 
+            <!-- Campo para subir la foto del producto -->
+            <div class="form-group">
+                <label for="prod_imagen">Foto del Producto:</label>
+                <input type="file" class="form-control-file" id="prod_imagen" name="prod_imagen" accept="image/*" required>
+            </div>
+
             <button type="submit" class="btn btn-primary">Crear Producto</button>
         </form>
     </main>
@@ -67,4 +75,5 @@ if (!isset($_SESSION['usuario']) || $_SESSION['rol'] != 1) {
     </footer>
 </body>
 </html>
+
     

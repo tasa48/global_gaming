@@ -5,8 +5,6 @@ session_start();
 if (isset($_GET['logout']) && $_GET['logout'] == 1) {
     echo "<script>alert('Has cerrado sesión correctamente.');</script>";
 }
-$sql = "select  prod_codigo, prod_nombre, prod_descripcion FROM producto";
-$result = $conn->query($sql);
 
 
 
@@ -38,7 +36,7 @@ $result = $conn->query($sql);
           <a class="nav-link" href="index.php">Inicio <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="vista/descuentos.html">Descuentos</a>
+          <a class="nav-link" href="vista/descuentos.php">Descuentos</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">

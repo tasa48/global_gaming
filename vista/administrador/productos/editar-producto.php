@@ -35,94 +35,98 @@ $result = $conn->query($sql);
     </header>
 
     <main>
-
-<div class="form-container mt-5">
-    <h2>Seleccionar Producto para Editar</h2>
-    <form action="editar-producto.php" method="GET">
-        <div class="form-group">
-            <label for="prod_codigo">Seleccione un Producto:</label>
-            <select name="prod_codigo" id="prod_codigo" class="form-control">
-                <option value="">Selecciona un Producto</option>
-                <?php while($row = $result->fetch_assoc()) { ?>
-                    <option value="<?php echo $row['prod_codigo']; ?>">
-                        <?php echo $row['prod_nombre']; ?>
-                    </option>
-                <?php } ?>
-            </select>
-        </div>
-        <button type="submit" class="btn btn-primary">Seleccionar</button>
-    </form>
-
-    <?php
-    if (isset($_GET['prod_codigo']) && !empty($_GET['prod_codigo'])) {
-        $codigo = $_GET['prod_codigo'];
-
-        // Obtener los detalles del producto seleccionado
-        $sql = "SELECT * FROM producto WHERE prod_codigo = $codigo";
-        $result = $conn->query($sql);
-
-        if ($result->num_rows > 0) {
-            $producto = $result->fetch_assoc();
-            ?>
-
-            <h3>Editar Información del Producto</h3>
-            <form action="../../../controlador/productos.php" method="POST">
-                <input type="hidden" name="prod_codigo" value="<?php echo $producto['prod_codigo']; ?>">
-                
+        <div class="form-container mt-5">
+            <h2>Seleccionar Producto para Editar</h2>
+            <form action="editar-producto.php" method="GET">
                 <div class="form-group">
-                    <label for="prod_nombre">Nombre del Producto:</label>
-                    <input type="text" class="form-control" id="prod_nombre" name="prod_nombre" value="<?php echo $producto['prod_nombre']; ?>" required>
+                    <label for="prod_codigo">Seleccione un Producto:</label>
+                    <select name="prod_codigo" id="prod_codigo" class="form-control">
+                        <option value="">Selecciona un Producto</option>
+                        <?php while($row = $result->fetch_assoc()) { ?>
+                            <option value="<?php echo $row['prod_codigo']; ?>">
+                                <?php echo $row['prod_nombre']; ?>
+                            </option>
+                        <?php } ?>
+                    </select>
                 </div>
-
-                <div class="form-group">
-                    <label for="prod_precioventa">Precio de Venta:</label>
-                    <input type="text" class="form-control" id="prod_precioventa" name="prod_precioventa" value="<?php echo $producto['prod_precioventa']; ?>" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="prod_stock">Stock:</label>
-                    <input type="text" class="form-control" id="prod_stock" name="prod_stock" value="<?php echo $producto['prod_stock']; ?>" required>
-                </div>
-
-                <div class="form-group">
-    <label for="prod_unidaddemedida">Unidad de Medida:</label>
-    <select class="form-control" id="prod_unidaddemedida" name="prod_unidaddemedida" required>
-        <option value="">Selecciona una unidad de medida</option>
-        <option value="unidad" <?php echo (isset($producto['prod_unidaddemedida']) && $producto['prod_unidaddemedida'] == 'unidad') ? 'selected' : ''; ?>>Unidad</option>
-        <option value="kilogramos" <?php echo (isset($producto['prod_unidaddemedida']) && $producto['prod_unidaddemedida'] == 'kilogramos') ? 'selected' : ''; ?>>Kilogramos</option>
-        <option value="litros" <?php echo (isset($producto['prod_unidaddemedida']) && $producto['prod_unidaddemedida'] == 'litros') ? 'selected' : ''; ?>>Litros</option>
-        <option value="pulgadas" <?php echo (isset($producto['prod_unidaddemedida']) && $producto['prod_unidaddemedida'] == 'pulgadas') ? 'selected' : ''; ?>>Pulgadas</option>
-        <option value="metros" <?php echo (isset($producto['prod_unidaddemedida']) && $producto['prod_unidaddemedida'] == 'metros') ? 'selected' : ''; ?>>Metros</option>
-        <option value="mililitros" <?php echo (isset($producto['prod_unidaddemedida']) && $producto['prod_unidaddemedida'] == 'mililitros') ? 'selected' : ''; ?>>Mililitros</option>
-    </select>
-</div>
-
-                <div class="form-group">
-                     <label for="prod_descripcion">Descripción:</label>
-                     <textarea class="form-control" id="prod_descripcion" name="prod_descripcion" rows="4" style="resize: none;" required><?php echo $producto['prod_descripcion']; ?></textarea>
-                 </div>
-
-
-                <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                <button type="submit" class="btn btn-primary">Seleccionar</button>
             </form>
 
             <?php
-        } else {
-            echo '<div class="alert alert-danger" role="alert">No se encontró el producto seleccionado.</div>';
-        }
-    } else {
-        echo '<div class="alert alert-warning" role="alert">Por favor, selecciona un producto.</div>';
-    }
-    $conn->close();
-    ?>
-</div>
+            if (isset($_GET['prod_codigo']) && !empty($_GET['prod_codigo'])) {
+                $codigo = $_GET['prod_codigo'];
 
+                // Obtener los detalles del producto seleccionado
+                $sql = "SELECT * FROM producto WHERE prod_codigo = $codigo";
+                $result = $conn->query($sql);
+
+                if ($result->num_rows > 0) {
+                    $producto = $result->fetch_assoc();
+                    ?>
+
+                    <h3>Editar Información del Producto</h3>
+                    <form action="../../../controlador/productos.php" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" name="prod_codigo" value="<?php echo $producto['prod_codigo']; ?>">
+                        
+                        <div class="form-group">
+                            <label for="prod_nombre">Nombre del Producto:</label>
+                            <input type="text" class="form-control" id="prod_nombre" name="prod_nombre" value="<?php echo $producto['prod_nombre']; ?>" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prod_precioventa">Precio de Venta:</label>
+                            <input type="text" class="form-control" id="prod_precioventa" name="prod_precioventa" value="<?php echo $producto['prod_precioventa']; ?>" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prod_stock">Stock:</label>
+                            <input type="text" class="form-control" id="prod_stock" name="prod_stock" value="<?php echo $producto['prod_stock']; ?>" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prod_unidaddemedida">Unidad de Medida:</label>
+                            <select class="form-control" id="prod_unidaddemedida" name="prod_unidaddemedida" required>
+                                <option value="">Selecciona una unidad de medida</option>
+                                <option value="unidad" <?php echo ($producto['prod_unidaddemedida'] == 'unidad') ? 'selected' : ''; ?>>Unidad</option>
+                                <option value="kilogramos" <?php echo ($producto['prod_unidaddemedida'] == 'kilogramos') ? 'selected' : ''; ?>>Kilogramos</option>
+                                <option value="litros" <?php echo ($producto['prod_unidaddemedida'] == 'litros') ? 'selected' : ''; ?>>Litros</option>
+                                <!-- Agrega más opciones si es necesario -->
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="prod_descripcion">Descripción:</label>
+                            <textarea class="form-control" id="prod_descripcion" name="prod_descripcion" rows="4" style="resize: none;" required><?php echo $producto['prod_descripcion']; ?></textarea>
+                        </div>
+
+                        <!-- Nuevo campo para cargar la imagen -->
+                        <div class="form-group">
+                            <label for="prod_imagen">Imagen del Producto (opcional):</label>
+                            <input type="file" class="form-control-file" id="prod_imagen" name="prod_imagen">
+                            <?php if (!empty($producto['prod_imagen'])): ?>
+                                <p>Imagen actual:</p>
+                                <img src="../../../img/<?php echo $producto['prod_imagen']; ?>" alt="<?php echo $producto['prod_nombre']; ?>" style="max-width: 150px;">
+                            <?php endif; ?>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Guardar cambios</button>
+                    </form>
+
+                    <?php
+                } else {
+                    echo '<div class="alert alert-danger" role="alert">No se encontró el producto seleccionado.</div>';
+                }
+            } else {
+                echo '<div class="alert alert-warning" role="alert">Por favor, selecciona un producto.</div>';
+            }
+            $conn->close();
+            ?>
+        </div>
     </main>
 
     <footer class="text-center mt-5">
         <p>© 2024 Panel de administrador Global Gaming</p>
     </footer>
 
-   
 </body>
 </html>
