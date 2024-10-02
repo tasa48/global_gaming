@@ -67,7 +67,7 @@
                     // Recorrer los resultados y generar las cards dinámicamente
                     while($row = $result->fetch_assoc()) {
                         // Asignar la ruta de la imagen según el campo prod_foto, o mostrar una imagen por defecto si no existe
-                        $imagen_producto = !empty($row['prod_imagen']) ? 'img/productos/' . $row['prod_imagen'] : 'img/default.png';
+                        $imagen_producto = !empty($row['prod_imagen']) ? 'img/prod-fotos/' . $row['prod_imagen'] : 'img/default.png';
                         ?>
                         <div class="col-md-4">
                             <div class="card">

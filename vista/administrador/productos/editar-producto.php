@@ -105,7 +105,7 @@ $result = $conn->query($sql);
                             <input type="file" class="form-control-file" id="prod_imagen" name="prod_imagen">
                             <?php if (!empty($producto['prod_imagen'])): ?>
                                 <p>Imagen actual:</p>
-                                <img src="../../../img/<?php echo $producto['prod_imagen']; ?>" alt="<?php echo $producto['prod_nombre']; ?>" style="max-width: 150px;">
+                                <img src="../../../img/prod-fotos/<?php echo $producto['prod_imagen']; ?>" alt="<?php echo $producto['prod_nombre']; ?>" style="max-width: 150px;">
                             <?php endif; ?>
                         </div>
 

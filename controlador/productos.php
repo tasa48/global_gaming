@@ -7,11 +7,11 @@ if (isset($_GET['prod_codigo'])) {
     $codigo = $_GET['prod_codigo'];
 
     // Eliminar la imagen del producto también (opcional)
-    $sql = "SELECT prod_foto FROM producto WHERE prod_codigo = $codigo";
+    $sql = "SELECT prod_imagen FROM producto WHERE prod_codigo = $codigo";
     $result = $conn->query($sql);
     if ($result->num_rows > 0) {
         $row = $result->fetch_assoc();
-        $foto_path = "../img/productos/" . $row['prod_imagen'];
+        $foto_path = "../vista/img/prod-fotos/" . $row['prod_imagen'];
         if (file_exists($foto_path)) {
             unlink($foto_path); // Eliminar la imagen del servidor
         }
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Procesar la imagen 
     $foto = '';
     if (isset($_FILES['prod_imagen']) && $_FILES['prod_imagen']['error'] === UPLOAD_ERR_OK) {
-        $target_dir = "../img/productos/"; // Carpeta donde se guardarán las imágenes
+        $target_dir = "../vista/img/prod-fotos/"; // Carpeta donde se guardarán las imágenes
         $foto = basename($_FILES['prod_imagen']['name']); // Nombre del archivo
         $target_file = $target_dir . $foto; // Ruta completa del archivo
 
@@ -75,7 +75,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $result = $conn->query($sql_img);
             if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
-                $foto_path = "../img/productos/" . $row['prod_imagen'];
+                $foto_path = "../vista/img/prod-fotos/" . $row['prod_imagen'];
                 if (file_exists($foto_path)) {
                     unlink($foto_path); // Eliminar la imagen anterior del servidor
                 }
@@ -107,7 +107,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $unidaddemedida = $_POST['prod_unidaddemedida'];
         $descripcion = $_POST['prod_descripcion'];
 
-        $sql = "INSERT INTO producto (prod_nombre, prod_precioventa, prod_stock, prod_unidaddemedida, prod_foto, prod_descripcion) 
+        $sql = "INSERT INTO producto (prod_nombre, prod_precioventa, prod_stock, prod_unidaddemedida, prod_imagen, prod_descripcion) 
                 VALUES ('$nombre', '$precioventa', '$stock', '$unidaddemedida', '$foto', '$descripcion')";
 
         if ($conn->query($sql) === TRUE) {
