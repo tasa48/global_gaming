@@ -1,0 +1,111 @@
+.alto {
+	height: 680px !important;
+}
+.barra{
+	background-color:#000 ;
+	
+}
+ul li a {
+ 	color:#FFC300 !important;
+ 	font-size:25px !important ;
+ 	font-family: monospace !important;
+ 	padding-left: 20px !important;
+ 	margin-top: -9px;
+}
+.beneficios{
+background-color: #000;
+height: 200px;
+color:#FFC300;
+font-size: 24px;
+font-weight: bold;
+text-align: center;
+margin-top: 20px;
+padding-top: 20px;
+margin-bottom: 30px;
+}
+.barra2{
+	background-color: #000;
+	border-radius: 20px;
+}
+.navbar-toggler-icon{
+	color:#fff !important;
+}
+.btn-primary{
+	background-color: #FFC300;
+}
+
+
+
+body {
+    background-color: #f8f9fa; /* Color de fondo suave */
+}
+
+.product-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333; /* Color del título */
+}
+
+.product-description {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #555; /* Color del texto de la descripción */
+}
+
+.product-available {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #007bff; /* Color para la disponibilidad */
+}
+
+.product-price {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #dc3545; /* Color para el precio */
+}
+
+#buy-button {
+    width: 100%; /* Botón de ancho completo */
+    font-size: 1.2rem;
+}
+
+
+footer {
+	background-color: #000;
+	color: #fff;
+	text-align: center;
+	padding: 20px 0;
+  }
+  
+  .footer-content {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+  }
+  
+  .footer-section {
+	flex: 1;
+	margin: 0 20px;
+  }
+  
+  .footer-section img {
+	max-width: 100%;
+	height: auto;
+  }
+  
+  .social-icons a {
+	color: #fff;
+	font-size: 24px;
+	margin-right: 10px;
+  }
+  
+  .footer-bottom {
+	margin-top: 20px;
+  }
+  
+  .footer-bottom p {
+	margin: 0;
+  }
+  

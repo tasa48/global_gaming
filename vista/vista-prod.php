@@ -1,20 +1,11 @@
-    <?php
-    // Incluir el archivo de conexión a la base de datos
-    include '../modelo/conexion_bd.php';
-
-    // Consulta para obtener los productos de la base de datos, incluyendo la imagen
-    $sql = "SELECT prod_codigo, prod_nombre, prod_precioventa, prod_descripcion, prod_imagen FROM producto";
-    $result = $conn->query($sql);
-    ?>
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
     <html lang="es">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Global Gaming - Productos con Descuento</title>
+        <title>Global Gaming - compra :)</title>
         <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-        <link rel="stylesheet" type="text/css" href="css/descuentos.css">
+        <link rel="stylesheet" type="text/css" href="css/prod-vista.css">
         <link rel="icon" href="img/G-icon.ico">
         <script src="js/descuentos.js"></script>
     </head>
@@ -56,44 +47,30 @@
             </div>
         </nav>
 
-        <!-- Contenido principal -->
-        <div class="container mt-3">
-            <h1>Productos con descuentos</h1>
-                </div>
-                <div class="container-fluid">
-    <div class="row">
-        <?php
-        // Verificar si hay productos en la base de datos
-        if ($result->num_rows > 0) {
-            // Recorrer los resultados y generar las cards dinámicamente
-            while($row = $result->fetch_assoc()) {
-                // Asignar la ruta de la imagen según el campo prod_foto, o mostrar una imagen por defecto si no existe
-                $imagen_producto = !empty($row['prod_imagen']) ? 'img/prod-fotos/' . $row['prod_imagen'] : 'img/default.png';
-                ?>
-                <div class="col-md-4">
-                    <div class="card" style="max-width: 18rem;">
-                        <!-- Mostrar la imagen del producto -->
-                        <img src="<?php echo $imagen_producto; ?>" class="card-img-top img-fluid" alt="<?php echo htmlspecialchars($row['prod_nombre']); ?>" style="max-height: 200px; object-fit: contain;">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo htmlspecialchars($row['prod_nombre']); ?></h5>
-                            <p class="card-text"><strong>$<?php echo number_format($row['prod_precioventa'], 2); ?></strong></p>
-                            <a href="#" class="btn btn-primary">comprar 
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <?php
-            }
-        } else {
-            echo "<p>No hay productos disponibles.</p>";
-        }
-        ?>
+
+<!-- Contenido general de la pagina web -->
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-center" style="height: 100vh;">
+        <div class="col-md-6">
+            <img src="img/1.png" alt="Nombre del Producto" class="img-fluid" id="product-image">
+        </div>
+        <div class="col-md-6">
+            <h2 class="product-title">Nombre del Producto</h2>
+            <p class="product-description">Descripción detallada del producto. Aquí puedes incluir información sobre características, beneficios y cualquier otra cosa relevante que el cliente debería saber.</p>
+            <p class="product-available">Número de productos disponibles: <strong>10</strong></p>
+            <p class="product-price"><strong>$99.99</strong></p>
+            <button class="btn btn-primary" id="buy-button">Añadir al carrito</button>
+        </div>
     </div>
 </div>
 
+<!-- Bootstrap JS (opcional) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
-        <!-- Footer -->
-        <footer>
+<!-- pie de pagina -->
+<footer>
             <div class="footer-content">
                 <div class="footer-section">
                     <h2>Teléfono</h2>
@@ -122,8 +99,3 @@
         <script src="js/bootstrap.bundle.js"></script>
     </body>
     </html>
-
-    <?php
-    // Cerrar la conexión
-    $conn->close();
-    ?>

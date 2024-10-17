@@ -63,8 +63,9 @@ $result = $conn->query($sql);
                 if ($result->num_rows > 0) {
                     $producto = $result->fetch_assoc();
                     ?>
-
+                    <br>
                     <h3>Editar Información del Producto</h3>
+                    <br>
                     <form action="../../../controlador/productos.php" method="POST" enctype="multipart/form-data">
                         <input type="hidden" name="prod_codigo" value="<?php echo $producto['prod_codigo']; ?>">
                         
@@ -105,7 +106,7 @@ $result = $conn->query($sql);
                             <input type="file" class="form-control-file" id="prod_imagen" name="prod_imagen">
                             <?php if (!empty($producto['prod_imagen'])): ?>
                                 <p>Imagen actual:</p>
-                                <img src="../../../img/prod-fotos/<?php echo $producto['prod_imagen']; ?>" alt="<?php echo $producto['prod_nombre']; ?>" style="max-width: 150px;">
+                               <center> <img src="../../img/prod-fotos/<?php echo $producto['prod_imagen']; ?>" alt="<?php echo $producto['prod_nombre']; ?>" style="max-width: 150px;"> </center>
                             <?php endif; ?>
                         </div>
 

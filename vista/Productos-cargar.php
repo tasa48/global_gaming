@@ -1,4 +1,4 @@
-    <?php
+<?php
     // Incluir el archivo de conexión a la base de datos
     include '../modelo/conexion_bd.php';
 
@@ -57,40 +57,37 @@
         </nav>
 
         <!-- Contenido principal -->
-        <div class="container mt-3">
-            <h1>Productos con descuentos</h1>
-                </div>
-                <div class="container-fluid">
-    <div class="row">
-        <?php
-        // Verificar si hay productos en la base de datos
-        if ($result->num_rows > 0) {
-            // Recorrer los resultados y generar las cards dinámicamente
-            while($row = $result->fetch_assoc()) {
-                // Asignar la ruta de la imagen según el campo prod_foto, o mostrar una imagen por defecto si no existe
-                $imagen_producto = !empty($row['prod_imagen']) ? 'img/prod-fotos/' . $row['prod_imagen'] : 'img/default.png';
-                ?>
-                <div class="col-md-4">
-                    <div class="card" style="max-width: 18rem;">
-                        <!-- Mostrar la imagen del producto -->
-                        <img src="<?php echo $imagen_producto; ?>" class="card-img-top img-fluid" alt="<?php echo htmlspecialchars($row['prod_nombre']); ?>" style="max-height: 200px; object-fit: contain;">
-                        <div class="card-body">
-                            <h5 class="card-title"><?php echo htmlspecialchars($row['prod_nombre']); ?></h5>
-                            <p class="card-text"><strong>$<?php echo number_format($row['prod_precioventa'], 2); ?></strong></p>
-                            <a href="#" class="btn btn-primary">comprar 
-                            </a>
-                        </div>
-                    </div>
-                </div>
+        <div class="container mt-5">
+          
+            <div class="row mt-5">
                 <?php
-            }
-        } else {
-            echo "<p>No hay productos disponibles.</p>";
-        }
-        ?>
-    </div>
-</div>
-
+                // Verificar si hay productos en la base de datos
+                if ($result->num_rows > 0) {
+                    // Recorrer los resultados y generar las cards dinámicamente
+                    while($row = $result->fetch_assoc()) {
+                        // Asignar la ruta de la imagen según el campo prod_foto, o mostrar una imagen por defecto si no existe
+                        $imagen_producto = !empty($row['prod_imagen']) ? 'img/prod-fotos/' . $row['prod_imagen'] : 'img/default.png';
+                        ?>
+                        <div class="col-md-4">
+                            <div class="card">
+                                <!-- Mostrar la imagen del producto -->
+                                <img src="<?php echo $imagen_producto; ?>" class="card-img-top" alt="<?php echo htmlspecialchars($row['prod_nombre']); ?>">
+                                <div class="card-body">
+                                    <h5 class="card-title"><?php echo htmlspecialchars($row['prod_nombre']); ?></h5>
+                                    
+                                    <p class="card-text"><strong>$<?php echo number_format($row['prod_precioventa'], 2); ?></strong></p>
+                                    <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                                </div>
+                            </div>
+                        </div>
+                        <?php
+                    }
+                } else {
+                    echo "<p>No hay productos disponibles.</p>";
+                }
+                ?>
+            </div>
+        </div>
 
         <!-- Footer -->
         <footer>

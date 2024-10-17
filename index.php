@@ -43,10 +43,10 @@ if (isset($_GET['logout']) && $_GET['logout'] == 1) {
             Productos
           </a>
           <div class="dropdown-menu barra2" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="vista/destacados.html">Destacados</a>
-            <a class="dropdown-item" href="#">Nuevos Productos</a>
+            <a class="dropdown-item" href="vista/Productos-cargar.php">Productos </a>
+            <a class="dropdown-item" href="#">Juegos</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#">Productos</a>
+            <a class="dropdown-item" href="#">Soporte tecnico </a>
           </div>
         </li>
         <li class="nav-item">
