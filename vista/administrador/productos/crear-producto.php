@@ -51,9 +51,15 @@ if (!isset($_SESSION['usuario']) || $_SESSION['rol'] != 1) {
             </div>
 
             <div class="form-group">
-                <label for="prod_unidaddemedida">Unidad de Medida:</label>
-                <input type="text" class="form-control" id="prod_unidaddemedida" name="prod_unidaddemedida" required>
-            </div>
+                            <label for="prod_unidaddemedida">Unidad de Medida:</label>
+                            <select class="form-control" id="prod_unidaddemedida" name="prod_unidaddemedida" required>
+                                <option value="">Selecciona una unidad de medida</option>
+                                <option value="unidad">Unidad</option>
+                                <option value="kilogramos">Kilogramos</option>
+                                <option value="litros">Litros</option>
+                                <!-- Agrega más opciones si es necesario -->
+                            </select>
+                        </div>
 
             <div class="form-group">
                 <label for="prod_descripcion">Descripción:</label>

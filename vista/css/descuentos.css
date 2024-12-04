@@ -10,7 +10,9 @@
 /*cards de compra */
 @import url("https://fonts.googleapis.com/css2?family=Istok+Web:wght@400;700&display=swap");
 
-
+body{
+  background-color: #000000;
+}
 /* footer */
 footer {
 background-color: #000;
@@ -85,3 +87,45 @@ margin: 0;
   .btn-primary{
     background-color: #FFC300;
   }
+
+  
+  .card { 
+      background-color: #000814; 
+      margin-bottom: 20px;
+      color: #FFC300;
+      padding: 20px 10px 0 10px; /* padding en un solo línea */
+      border-radius: 20px;
+      text-align: center; /* Centrar texto en .card */
+      margin-left: 20px !important;
+      margin-right: 20px !important;
+  }
+ 
+  .row {
+      padding-top: 50px; /* Padding hacia arriba */
+  }
+
+  .col-md-4 {
+      margin-bottom: 20px; /* Margen inferior */
+  }
+
+  .card-title,
+  .card-text {
+      text-align: center;   
+  }
+
+  .btn-card {
+      display: flex;
+      justify-content: center;
+      
+  }
+  .btn-card:hover {
+    background-color: #011400;
+  }
+
+.titulo-pp{
+  color: #FFC300;
+  padding-top: 40;
+ 
+}
+
+   

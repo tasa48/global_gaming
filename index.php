@@ -110,7 +110,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 1) {
           <div class="card-body">
             <h5 class="card-title">Teclado Red Dragon mecanico</h5>
             <p class="card-text">Teclado de alta calidad para juegos, econfiguracion de 60% perfecto para jugar.</p>
-            <a href="vista/descuentos.html" class="btn btn-primary">Comprar</a>
+            <a href="vista/Productos-cargar.php" class="btn btn-primary">Comprar</a>
           </div>
         </div>
       </div>
@@ -120,7 +120,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 1) {
           <div class="card-body">
             <h5 class="card-title">G502</h5>
             <p class="card-text">El mouse mas usado para los video juegos, cuenta con baja latencia y una calidad muy buena</p>
-            <a href="vista/descuentos.html" class="btn btn-primary">Comprar</a>
+            <a href="vista/Productos-cargar.php" class="btn btn-primary">Comprar</a>
           </div>
         </div>
       </div>
@@ -130,7 +130,7 @@ if (isset($_GET['logout']) && $_GET['logout'] == 1) {
           <div class="card-body">
             <h5 class="card-title">Mouse custom LOL</h5>
             <p class="card-text">Mouse version LoL para los raritos no se que mause es :)</p>
-            <a href="vista/descuentos.html" class="btn btn-primary">Comprar</a>
+            <a href="vista/Productos-cargar.php" class="btn btn-primary">Comprar</a>
           </div>
         </div>
       </div>
